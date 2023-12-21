@@ -48,8 +48,8 @@ const GithubAuth = () => {
   async function getAccessToken() {
     try {
       const response = await fetch(
-        // `http://192.168.100.30:8000/api/generate-access-token/?code=${codeParam}`,
-        `http://38.242.151.158:8000/api/generate-access-token/?code=${codeParam}`,
+        `https://mrk.elenta.co/api/generate-access-token/?code=${codeParam}`,
+        // `http://38.242.151.158:8000/api/generate-access-token/?code=${codeParam}`,
         {
           method: "POST",
         }
