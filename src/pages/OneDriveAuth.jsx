@@ -76,10 +76,10 @@ const OneDriveAuth = () => {
 
       if (response.ok) {
         const data = await response.json();
-        console.log("Access Response", data?.token);
-        if (data.token) {
-          localStorage.setItem("access_token", data?.token);
-          setAccessToken(data?.token);
+        console.log("Access Response", data);
+        if (data?.access_token) {
+          localStorage.setItem("access_token", data?.access_token);
+          setAccessToken(data?.access_token);
         } else {
           console.error("Access token not found in the response data:", data);
         }
