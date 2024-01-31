@@ -31,7 +31,7 @@ jobs:
         port: 22
         username: ${{ secrets.SERVER_USERNAME }}
         password: ${{ secrets.SERVER_PASSWORD }}
-        remote_folder: /var/www/html/mrk.elenta.co.auth
+        remote_folder: /home/mrk/domains/elenta.co.auth/public_html
         local_folder: Markify/dist
         cleanup: true
         include: '[ "*", "**/*" ]'
