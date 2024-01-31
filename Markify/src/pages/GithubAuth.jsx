@@ -15,33 +15,6 @@ const GithubAuth = () => {
   const urlParams = new URLSearchParams(queryString);
   const codeParam = urlParams.get("code");
 
-  // async function getAccessToken() {
-  //   try {
-  //     const response = await fetch("http://localhost:4000/getAccessToken?code=" + codeParam, {
-  //       method: "GET",
-  //     });
-
-  //     console.log("github Response ", response);
-
-  //     if (response.ok) {
-  //       const data = await response.json();
-  //       if (data.access_token) {
-  //         localStorage.setItem("access_token", data.access_token);
-  //         setAccessToken(data.access_token);
-  //         console.log("Access token saved:", data.access_token);
-  //       } else {
-  //         console.error("Access token not found in the response data:", data);
-  //       }
-  //     } else {
-  //       console.error("Failed to fetch access token:", response.status, response.statusText);
-  //     }
-  //   } catch (error) {
-  //     console.log("github Errror");
-  //     console.error("Error while fetching access token:", error);
-  //   }
-  // }
-
-  //
 
   console.log("codeParam ==>", codeParam);
 
