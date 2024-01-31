@@ -18,10 +18,10 @@ jobs:
       with:
         node-version: 18
     - name: Install dependency
-      working-directory: E:\react-projects\Markify
-      run: npm install
+      working-directory: Markify
+      run: npm install --legacy-peer-deps
     - name: Build
-      working-directory: E:\react-projects\Markify
+      working-directory: Markify
       run: yarn run build
     - name: FTP Deployer
       uses: sand4rt/ftp-deployer@v1.4
@@ -32,7 +32,7 @@ jobs:
         username: ${{ secrets.SERVER_USERNAME }}
         password: ${{ secrets.SERVER_PASSWORD }}
         remote_folder: /var/www/html/mrk.elenta.co.auth
-        local_folder: E:\react-projects\Markify/dist
+        local_folder: Markify/dist
         cleanup: true
         include: '[ "*", "**/*" ]'
         exclude: '["node_modules/**",".github/**", ".git/**"]'
