@@ -22,7 +22,6 @@ const GithubAuth = () => {
     try {
       const response = await fetch(
         `https://mrk.elenta.co/api/generate-access-token/?code=${codeParam}`,
-        // `http://38.242.151.158:8000/api/generate-access-token/?code=${codeParam}`,
         {
           method: "POST",
         }
